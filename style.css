@@ -1,0 +1,295 @@
+@font-face {
+    font-family: Azosans-medium;
+    src: url(./fonts/AzoSans-Medium.ttf);
+}
+@font-face {
+    font-family: Azosans-bold;
+    src: url(./fonts/AzoSans-Bold.ttf);
+}
+@font-face {
+    font-family: Azosans-regular;
+    src: url(./fonts/AzoSans-Regular.ttf);
+}
+
+.section-container{
+    background-color: #2936A2;
+    min-height:100vh;
+}
+#listItem1, #listItem2, #listItem3, #listItem4, #listItem5, #listItem6, #listItem7{
+    color:white;
+    font-family: Azosans-medium;
+    font-size:12px;
+    position:relative;
+}
+#listItem1::after, #listItem2::after, #listItem3::after, #listItem4::after, #listItem5::after, #listItem6::after, #listItem7::after{
+    position:absolute;
+    content:"";
+    width:0;
+    height:2px;
+    top:30px;
+    left:20px; 
+    transition: .4s all linear;
+}
+
+#listItem1:hover::after, #listItem2:hover::after, #listItem3:hover::after, #listItem4:hover::after, #listItem5:hover::after, #listItem6:hover::after, #listItem7:hover::after{
+    color:#79C91B;
+    width: 80%;
+    background-image:linear-gradient(to right, #70C618, #C1FA7F);
+    border-radius:10px; 
+}
+#listItem1:hover, #listItem2:hover, #listItem3:hover, #listItem4:hover, #listItem5:hover, #listItem6:hover, #listItem7:hover{
+    color: #79C91B;
+}
+.login-nav-link {
+    position: relative;
+    min-width: 110px;
+    transition: .3s all linear;
+}
+.login-logo{
+    height:31px;
+    width:31px;
+}
+.login-text{
+    color:#ffffff;
+    font-family: Azosans-medium;
+    font-size:16px;
+    margin-left:14px;
+}
+.login-text:hover{
+    color:#79C91B;
+    transition: .4s all linear;
+}
+.title{
+    color:#ffffff;
+    font-family: Azosans-bold;
+    font-size:50px;
+}
+.partnerships-description{
+    margin-top:13px;
+    color:#79C91B;
+    font-family: Azosans-regular;
+    font-size:24px;
+}
+.grid-image {
+    
+    animation-name: grid-image-rotate;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    transition: .6s all linear;
+}
+@keyframes grid-image-rotate {
+     0% {transform: rotateY(0deg);}
+    100% {transform: rotateY(360deg);}
+}
+
+.cards-container {
+    list-style-type: none;
+    font-family: Azosans-bold;
+}
+.each-card{
+width:280px;
+height: 280px;
+background-color: #20267B;
+border-radius:16px;
+border-top-left-radius: 26px;
+color:#ffffff;
+position: relative;
+overflow: hidden;
+}
+.each-card::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 100%;
+    left:0;
+    bottom:0;
+    transition: .3s all linear;
+}
+.each-card:hover::before  {
+    background-image: url(Images/animate-bg.png);
+    top:0;
+}
+.each-card:hover .card-title{
+    color: #0063C5;
+    transition: .5s linear;
+    opacity: 0.97;
+}
+.card-numbering{
+    background-color: #79C91B;
+    width:30px;
+    height:30px;
+    font-size: 16px;
+    color:#ffffff;
+    border-radius:8px;
+    transform:rotate(45deg);
+    position:relative;
+}
+.right-arrow{
+    opacity:0.5;
+    text-decoration:none;
+}
+ .card-one::after{
+    position:absolute;
+    content: "01";
+    top:5px;
+    left:5px;
+    color: white;
+    transform: rotate(-45deg);
+} 
+
+.card-title{
+    font-size: 24px;
+    color:#ffffff;
+    opacity:0.5;
+    /* white-space:pre-wrap; */
+}
+.card-two::after{
+    position:absolute;
+    content: "02";
+    top:5px;
+    left:5px;
+    color: white;
+    transform: rotate(-45deg);
+} 
+.card-three::after{
+    position:absolute;
+    content: "03";
+    top:5px;
+    left:5px;
+    color: white;
+    transform: rotate(-45deg);
+} 
+.card-four::after{
+    position:absolute;
+    content: "04";
+    top:5px;
+    left:5px;
+    color: white;
+    transform: rotate(-45deg);
+} 
+.sub-title{
+    color:#ffffff;
+    font-family: Azosans-bold;
+    font-size:40px;
+}
+.sub-title-details{
+    color:#ffffff;
+    font-size:16px;
+    font-family: Azosans-regular;
+}
+
+.footer-title, .footer-title-social{
+    color:#ffffff;
+    font-family: Azosans-bold;
+    font-size:20px;
+    position:relative;
+}
+.footer-title::after{
+    position:absolute;
+    content:"";
+    width:0;
+    height:2px;
+    top:30px;
+    left:0px; 
+    transition: .4s all linear;
+    width: 100%;
+    background-image:linear-gradient(to right, #70C618, #C1FA7F);
+    border-radius:10px;
+}
+.footer-title-social::after{
+    position:absolute;
+    content:"";
+    width:0px;
+    height:2px;
+    top:30px;
+    left:0px; 
+    transition: .4s all linear;
+    width: 160%;
+    background-image:linear-gradient(to right, #70C618, #C1FA7F);
+    border-radius:10px;
+}
+.user-input{
+    background-color: rgb(255, 255, 255, 0.08);
+    /* background-color: #ffffff0d; */
+    border:none;
+    outline:none;
+    width: 210px;
+    height: 40px;
+    border-radius: 30px;
+    color:white;
+    font-family: Azosans-regular;
+    font-size:12px;
+    padding:16px;
+}
+.user-input::-webkit-input-placeholder{
+    color:#ffffff;
+}
+.submit-container{
+    background-color:#79C91B;
+    padding:20px;
+    width:210px;
+    border:none;
+    border-radius:30px;
+}
+.submit-event{
+    color:#ffffff;
+    font-family: Azosans-medium;
+    font-size:12px;
+}
+.user-links{
+    color: #79C91B;
+    font-family: Azosans-regular;
+    font-size:14px;
+    text-decoration: none;
+}
+.user-links:hover{
+    color:#79C91B;
+}
+.contact-info{
+    font-family: Azosans-regular;
+    font-size:14px;
+}
+.quickLinks-list{
+    list-style-type:none;
+    padding:0px;
+}
+.quickLinks-list a{
+    text-decoration:none;
+    
+
+}
+.footer-quick-links{
+    color:#ffffff;
+    font-family: Azosans-regular;
+    font-size:13px;
+}
+.footer-quick-links:hover{
+    color:#79C91B;
+    transition:0.5 all linear;
+}
+.icon{
+    color:#2936A2;
+    background:white;
+    font-size:16px;
+    border-radius:4px;
+    padding:4px;
+    text-decoration:none;
+}
+.image-fluid{
+    max-width:100%;
+    height:auto;
+}
+.copyright-text{
+    color:#ffffff;
+    font-size:10px;
+    font-family: Azosans-regular;
+}
+.copyright-text a{
+    color:#ffffff;
+    text-decoration:none;
+}
+.copyright-text a:hover{
+    color:#79C91B;
+}
